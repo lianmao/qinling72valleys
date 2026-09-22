@@ -2,6 +2,12 @@
   "meta": {
     "note": "首批 10 大核心峪深度数据，来源 PRD §4 初稿。全部标记 confidence=unverified。",
     "decision_2026_09_22": "不收录农家乐联系电话/微信等任何联系方式，仅保留店名与招牌菜文字信息。",
+    "around_note": "三类周边清单（campsites / family_spots / photo_spots）同样源自 PRD §4 初稿文字，未核实；打卡点只写机位与看点，带 warning 的为危险机位。",
+    "campsite_type_legend": {
+      "commercial": "收费营地",
+      "wild": "野营地（无痕山林）",
+      "rv": "房车营地"
+    },
     "dashboard_state_legend": {
       "yes": "具备 / 允许",
       "partial": "有条件（见说明）",
@@ -25,6 +31,19 @@
         { "name": "大峪老李水泉农家院", "tag": "活水鱼 / 土鸡 / 山野菜" },
         { "name": "大峪星空野奢露营餐吧", "tag": "野奢天幕 / 咖啡下午茶" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "大峪星空野奢营地", "type": "commercial", "note": "水库上游，需预约", "source": "PRD §4.1" },
+          { "name": "水库上游指定平地", "type": "wild", "note": "无痕山林，禁入河道与下游滩地", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "大峪水库浅滩戏水区", "note": "夏季戏水，需成人全程看护", "source": "PRD §4.1" },
+          { "name": "十里庙林荫步道", "note": "缓坡短程，适合亲子散步", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "大峪水库大坝观景平台", "note": "库区水面与群山同框", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     },
     "VALLEY_043": {
@@ -42,6 +61,19 @@
         { "name": "子午仙庄", "tag": "农家土菜 / 河鲜" },
         { "name": "金仙山下素斋农舍", "tag": "素斋 / 山野菜" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "峪口外围营地", "type": "commercial", "note": "核心保护区禁止野宿，仅外围营地可过夜", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "子午古道登山步道", "note": "入门段坡缓，适合亲子短程往返", "source": "PRD §4.1" },
+          { "name": "金仙观", "note": "道教文化点，殿内需保持安静", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "子午峪口古道起点石碑", "note": "荔枝古道起点标识", "source": "PRD §4.1" },
+          { "name": "金仙观山门与山泉", "note": "观前山泉是沿线补给点", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     },
     "VALLEY_046": {
@@ -59,6 +91,20 @@
         { "name": "喂子坪林间客栈", "tag": "土鸡 / 山野菜" },
         { "name": "九龙山庄农家菜", "tag": "锅盔 / 农家菜" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "喂子坪自驾营地", "type": "commercial", "note": "国道旁，可过夜", "source": "PRD §4.1" },
+          { "name": "九龙潭沿线空地", "type": "wild", "note": "禁止在河道及滩地扎营，汛期一律禁入", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "九龙潭瀑布群", "note": "栈道观瀑，路面湿滑需牵手同行", "source": "PRD §4.1" },
+          { "name": "净业寺", "note": "古寺，进寺步道平缓", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "210 国道盘山弯道观景点", "note": "俯瞰沣河峡谷", "warning": "国道弯道：切勿在路面上停车或站位取景", "source": "PRD §4.1" },
+          { "name": "九龙潭瀑布水潭", "note": "夏季水量大，水雾明显", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     },
     "VALLEY_039": {
@@ -76,6 +122,19 @@
         { "name": "翠华山庄餐厅", "tag": "山野土菜" },
         { "name": "太乙宫老院子土菜馆", "tag": "农家土菜" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "翠华山天池露营基地", "type": "commercial", "note": "园区统一管理，需购票预约", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "翠华山国家地质公园", "note": "景区步道设施完善，亲子强度低", "source": "PRD §4.1" },
+          { "name": "冰风洞", "note": "洞内常年低温，需带外套", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "天池堰塞湖观景台", "note": "高山湖面与山崩石海同框", "source": "PRD §4.1" },
+          { "name": "冰风洞洞口", "note": "夏季洞口气流成雾", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     },
     "VALLEY_048": {
@@ -93,6 +152,19 @@
         { "name": "高冠听瀑楼", "tag": "烤土鸡 / 河鲜" },
         { "name": "老高冠清泉农家院", "tag": "农家菜 / 戏水" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "峪口周边民宿营地", "type": "commercial", "note": "景区内夜间清场，禁止野宿", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "高冠瀑布戏水浅滩", "note": "溪流平缓，需成人全程看护", "source": "PRD §4.1" },
+          { "name": "景区环线步道", "note": "峪口停车场步行 5 分钟入核心区，强度低", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "高冠瀑布水潭", "note": "李白咏诗地，水量大时气势最足", "source": "PRD §4.1" },
+          { "name": "浅滩水镜倒影", "note": "午后顺光时水面倒影清晰", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     },
     "VALLEY_050": {
@@ -110,6 +182,19 @@
         { "name": "太平红叶山庄", "tag": "土鸡 / 山野菜" },
         { "name": "紫荆花开农家乐", "tag": "农家菜 / 赏花" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "太平峪森林康养营地", "type": "commercial", "note": "景区内营地，支持帐篷搭建", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "森林公园木栈道", "note": "依山依水，坡度缓，适合亲子", "source": "PRD §4.1" },
+          { "name": "彩虹瀑布观景段", "note": "栈道近观，注意水雾湿滑", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "紫荆花海", "note": "4 月花期，万亩紫荆连片", "source": "PRD §4.1" },
+          { "name": "彩虹瀑布", "note": "晴日午后水雾易现虹", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     },
     "VALLEY_056": {
@@ -127,6 +212,20 @@
         { "name": "沙窝老屋农家", "tag": "民俗农家院" },
         { "name": "黑山岔聚贤山庄", "tag": "土猪肉 / 山野菜" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "沙窝村乡村营地", "type": "commercial", "note": "支持房车与帐篷过夜", "source": "PRD §4.1" },
+          { "name": "沙窝村外围乡道空地", "type": "rv", "note": "房车停靠需避开河道与村道会车段", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "沙窝村民俗聚落", "note": "传统秦岭农家院，可步行串巷", "source": "PRD §4.1" },
+          { "name": "黑山岔瀑布步道", "note": "缓坡进沟，注意湿滑", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "黑山岔百米冰瀑", "note": "冬季结冰期为最佳观赏期", "warning": "冰体不稳时勿贴近冰壁，勿在冰瀑正下方停留", "source": "PRD §4.1" },
+          { "name": "沙窝村老屋石墙", "note": "民俗风貌，进院拍照需先征得住户同意", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     },
     "VALLEY_026": {
@@ -144,6 +243,19 @@
         { "name": "清峪人家聚落", "tag": "九大碗 / 农家菜" },
         { "name": "蓝田聚宝生态农庄", "tag": "生态农庄" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "清峪草甸野营地", "type": "wild", "note": "无固定设施，需自备卫生设备，严格无痕山林", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "草甸溪流戏水段", "note": "水浅，仍需成人全程看护", "source": "PRD §4.1" },
+          { "name": "草甸开阔地", "note": "地面平整，适合亲子野餐", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "高山草甸开阔地", "note": "户外圈称「西安周边小阿勒泰」", "source": "PRD §4.1" },
+          { "name": "溪流穿林段", "note": "清晨逆光有林间水雾", "warning": "雨后 24 小时内勿进沟谷，谨防山洪", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     },
     "VALLEY_028": {
@@ -161,6 +273,20 @@
         { "name": "辋川别业客栈", "tag": "禅意民宿 / 茶食" },
         { "name": "摩诘草堂茶食坊", "tag": "茶食 / 农家菜" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "辋川禅意野奢营地", "type": "commercial", "note": "营地 + 民宿花园露营，需预约", "source": "PRD §4.1" },
+          { "name": "精品民宿院落", "type": "commercial", "note": "部分民宿支持院内搭帐，需提前确认", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "辋川沿线溪谷步道", "note": "缓行步道，溪石段适合亲子", "source": "PRD §4.1" },
+          { "name": "摩诘草堂茶食坊", "note": "茶食休整点，适合中途歇脚", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "「明月松间照，清泉石上流」溪石段", "note": "对应诗句的溪石机位，雨后水量更足", "source": "PRD §4.1" },
+          { "name": "辋川别业庭院", "note": "禅意建筑与庭院取景，进院需消费或征得同意", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     },
     "VALLEY_011": {
@@ -178,6 +304,18 @@
         { "name": "玉泉院古街老菜馆", "tag": "大刀面 / 汽锅鸡" },
         { "name": "西岳山珍楼", "tag": "山珍 / 农家菜" }
       ],
+      "around": {
+        "campsites": [
+          { "name": "山顶营地/宾馆周边指定区", "type": "commercial", "note": "仅指定区域可搭帐篷，上山前需提前确认", "source": "PRD §4.1" }
+        ],
+        "family_spots": [
+          { "name": "玉泉院及山脚古建群", "note": "山脚平缓段适合幼童短程；上山步道强度大，不建议低龄儿童全程徒步", "source": "PRD §4.1" }
+        ],
+        "photo_spots": [
+          { "name": "千尺幢、百尺峡摩崖石刻", "note": "险道段摩崖石刻密集", "warning": "险道机位：禁止为拍照跨越护栏或停留堵塞，雨雪天勿停留", "source": "PRD §4.1" },
+          { "name": "回心石", "note": "登山标志点，华山峪徒步起点后的第一个心里关口", "source": "PRD §4.1" }
+        ]
+      },
       "confidence": "unverified"
     }
   }

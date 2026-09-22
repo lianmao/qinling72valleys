@@ -24,6 +24,9 @@ export const DASH_LEGEND = {
   unknown: { label: '待核实', tone: 'text-slate-600 bg-slate-100' },
 }
 
+/** 营地类型 → 中文标签（top10_details.json 的 around.campsites[].type） */
+export const CAMPSITE_TYPE = { commercial: '收费营地', wild: '野营地', rv: '房车营地' }
+
 /** 列表筛选：全部条件彼此取交集，条件为空即放行 */
 export function filterValleys(list, { q = '', city = '', status = '', top10Only = false } = {}) {
   const needle = q.trim().toLowerCase()

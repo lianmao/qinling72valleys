@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { statusMeta, DASH_LEGEND } from '../lib/data'
+import { statusMeta, DASH_LEGEND, CAMPSITE_TYPE } from '../lib/data'
 import { navPlan, searchInAmap } from '../lib/nav'
 
 const props = defineProps({
@@ -17,6 +17,16 @@ const DIMS = [
   ['vehicle', '车辆直达', '🚗'],
   ['toilet', '公共洗手间', '🚻'],
 ]
+
+/** 三类周边清单：同一套渲染，省掉三份重复模板 */
+const AROUND = computed(() => {
+  const a = props.detail?.around || {}
+  return [
+    { key: 'campsites', label: '周边露营地', items: a.campsites, pill: (i) => CAMPSITE_TYPE[i.type] || '营地' },
+    { key: 'family_spots', label: '周边亲子游玩景点', items: a.family_spots, pill: () => '亲子' },
+    { key: 'photo_spots', label: '网红打卡点', items: a.photo_spots, pill: () => '机位' },
+  ].filter((s) => s.items?.length)
+})
 </script>
 
 <template>
@@ -125,6 +135,26 @@ const DIMS = [
 
       <section v-else class="rounded-lg border border-dashed border-stone-300 px-3 py-3 text-[11px] leading-relaxed text-stone-500">
         该峪尚未收录深度攻略（首批 10 个核心峪以外）。名录与坐标同样待核实。
+      </section>
+
+      <section v-for="s in AROUND" :key="s.key">
+        <h3 class="mb-2 text-sm font-semibold">{{ s.label }}</h3>
+        <ul class="divide-y divide-stone-100 rounded-lg border border-stone-200">
+          <li v-for="i in s.items" :key="i.name" class="px-3 py-2.5">
+            <p class="flex flex-wrap items-center gap-2 text-sm text-stone-800">
+              <span class="rounded bg-ridge-50 px-1.5 py-0.5 text-[10px] font-medium text-stone-600">{{ s.pill(i) }}</span>
+              {{ i.name }}
+            </p>
+            <p v-if="i.note" class="mt-1 text-[11px] leading-relaxed text-stone-500">{{ i.note }}</p>
+            <p v-if="i.warning" class="mt-1 text-[11px] leading-relaxed text-red-700">⚠ {{ i.warning }}</p>
+          </li>
+        </ul>
+        <p v-if="s.key === 'campsites'" class="mt-2 text-[11px] leading-relaxed text-stone-500">
+          野营地一律适用无痕山林：不留垃圾、不生明火、不占河道；收费营地的开放与收费以现场为准。
+        </p>
+        <p v-else-if="s.key === 'photo_spots'" class="mt-2 text-[11px] leading-relaxed text-stone-500">
+          打卡点为机位说明，未核实、不承诺拍摄效果。请勿为取景进入未开放区域或临崖边缘，禁止跨越护栏、攀爬文保石刻与涉水站位。
+        </p>
       </section>
 
       <section class="space-y-2">

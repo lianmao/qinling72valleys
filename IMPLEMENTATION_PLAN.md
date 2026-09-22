@@ -112,10 +112,26 @@
         "tag": "野奢天幕/咖啡下午茶",
         "price_per_person": "¥98"
       }
-    ]
+    ],
+    "around": {
+      "campsites": [
+        { "name": "大峪星空野奢营地", "type": "commercial", "note": "水库上游，需预约" },
+        { "name": "水库上游指定平地", "type": "wild", "note": "无痕山林，禁入河道与下游滩地" }
+      ],
+      "family_spots": [
+        { "name": "大峪水库浅滩戏水区", "note": "夏季戏水，需成人全程看护" }
+      ],
+      "photo_spots": [
+        { "name": "大峪水库大坝观景平台", "note": "库区水面与群山同框" }
+      ]
+    }
   }
 }
 ```
+
+> **三类周边清单约定**：`around` 为新增模块，含 `campsites`（type: commercial 收费营地 / wild 野营地 / rv 房车营地）、
+> `family_spots`（亲子，note 必写强度与看护要求）、`photo_spots`（打卡点，note 只写机位与看点）。
+> 与其余字段一致：**不收录任何联系方式**；未核实条目不进推荐位，前端统一显示「待核实」。
 
 ### 2.2 高德地图打点与交互策略
 
