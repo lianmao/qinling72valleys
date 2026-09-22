@@ -119,10 +119,10 @@
         { "name": "水库上游指定平地", "type": "wild", "note": "无痕山林，禁入河道与下游滩地" }
       ],
       "family_spots": [
-        { "name": "大峪水库浅滩戏水区", "note": "夏季戏水，需成人全程看护" }
+        { "name": "大峪水库浅滩戏水区", "age": "3+", "note": "夏季戏水，须成人贴身看护" }
       ],
       "photo_spots": [
-        { "name": "大峪水库大坝观景平台", "note": "库区水面与群山同框" }
+        { "name": "大峪水库大坝观景平台", "basis": "landmark", "note": "大峪水库大坝（水工地标）" }
       ]
     }
   }
@@ -130,7 +130,8 @@
 ```
 
 > **三类周边清单约定**：`around` 为新增模块，含 `campsites`（type: commercial 收费营地 / wild 野营地 / rv 房车营地）、
-> `family_spots`（亲子，note 必写强度与看护要求）、`photo_spots`（打卡点，note 只写机位与看点）。
+> `family_spots`（**`age` 必填**：建议最小年龄估算值 + note 写看护要求）、
+> `photo_spots`（**`basis` 必填**：historico 文史依据 / landmark 地标·地貌依据，主观机位不入库；危险机位加 `warning`）。
 > 与其余字段一致：**不收录任何联系方式**；未核实条目不进推荐位，前端统一显示「待核实」。
 
 ### 2.2 高德地图打点与交互策略

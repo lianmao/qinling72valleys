@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { statusMeta, DASH_LEGEND, CAMPSITE_TYPE } from '../lib/data'
+import { statusMeta, DASH_LEGEND, CAMPSITE_TYPE, PHOTO_BASIS } from '../lib/data'
 import { navPlan, searchInAmap } from '../lib/nav'
 
 const props = defineProps({
@@ -23,10 +23,21 @@ const AROUND = computed(() => {
   const a = props.detail?.around || {}
   return [
     { key: 'campsites', label: '周边露营地', items: a.campsites, pill: (i) => CAMPSITE_TYPE[i.type] || '营地' },
-    { key: 'family_spots', label: '周边亲子游玩景点', items: a.family_spots, pill: () => '亲子' },
-    { key: 'photo_spots', label: '网红打卡点', items: a.photo_spots, pill: () => '机位' },
+    { key: 'family_spots', label: '周边亲子游玩景点', items: a.family_spots, pill: (i) => (i.age ? `亲子 ${i.age}` : '亲子') },
+    { key: 'photo_spots', label: '网红打卡点', items: a.photo_spots, pill: (i) => PHOTO_BASIS[i.basis] || '机位' },
   ].filter((s) => s.items?.length)
 })
+
+const AROUND_FOOTNOTE = {
+  campsites: '野营地一律适用无痕山林：不留垃圾、不生明火、不占河道；收费营地的开放与收费以现场为准。',
+  family_spots: '适龄为按步道长度与坡度估算的建议最小年龄，未核实；带幼童请按现场路况与孩子体能判断。',
+  photo_spots: '只收录有文史或地标依据的机位，未核实、不承诺拍摄效果。请勿为取景进入未开放区域或临崖边缘，禁止跨越护栏、攀爬文保石刻与涉水站位。',
+}
+const PROVENANCE_NOTE = '标「整理」者为原文档只有描述、名称由本站归纳；其余为文档原列。'
+
+/** 农家乐分两档：公开检索可查的照常列出，其余折叠并标注不作为推荐 */
+const verifiedStores = computed(() => (props.detail?.agritainment || []).filter((s) => s.verify?.status === 'found_local'))
+const unverifiedStores = computed(() => (props.detail?.agritainment || []).filter((s) => s.verify?.status !== 'found_local'))
 </script>
 
 <template>
@@ -121,15 +132,37 @@ const AROUND = computed(() => {
 
       <section v-if="detail?.agritainment?.length">
         <h3 class="mb-2 text-sm font-semibold">周边农家乐</h3>
-        <ul class="divide-y divide-stone-100 rounded-lg border border-stone-200">
-          <li v-for="s in detail.agritainment" :key="s.name" class="px-3 py-2.5">
-            <p class="text-sm text-stone-800">{{ s.name }}</p>
+
+        <ul v-if="verifiedStores.length" class="divide-y divide-stone-100 rounded-lg border border-stone-200">
+          <li v-for="s in verifiedStores" :key="s.name" class="px-3 py-2.5">
+            <p class="flex flex-wrap items-center gap-2 text-sm text-stone-800">
+              {{ s.name }}
+              <span class="rounded bg-emerald-50 px-1.5 py-0.5 text-[10px] font-medium text-emerald-700">公开可查</span>
+            </p>
             <p class="mt-0.5 text-[11px] text-stone-500">{{ s.tag }}</p>
           </li>
         </ul>
+
+        <details
+          v-if="unverifiedStores.length"
+          class="rounded-lg border border-amber-200 bg-amber-50/70 px-3 py-2"
+        >
+          <summary class="min-h-11 cursor-pointer py-2 text-xs font-medium text-amber-900">
+            未核实候选名单 {{ unverifiedStores.length }} 家（点击展开，不作为推荐）
+          </summary>
+          <p class="mt-1 text-[11px] leading-relaxed text-amber-800">
+            以下名称来自需求文档初稿，公开检索未找到对应实体。列出仅为待核实线索，请以现场与官方信息为准。
+          </p>
+          <ul class="mt-2 divide-y divide-amber-100">
+            <li v-for="s in unverifiedStores" :key="s.name" class="py-2">
+              <p class="text-sm text-stone-700">{{ s.name }}</p>
+              <p class="mt-0.5 text-[11px] text-stone-500">{{ s.tag }}</p>
+            </li>
+          </ul>
+        </details>
+
         <p class="mt-2 text-[11px] leading-relaxed text-stone-500">
-          本站不收录联系电话与微信。到店前请在高德地图搜索店名确认营业与位置，
-          名单为初稿，未经核实，不构成推荐。
+          本站不收录联系电话与微信。到店前请在高德地图搜索店名确认营业与位置；名单与菜品均未经核实，不构成推荐。
         </p>
       </section>
 
@@ -144,16 +177,17 @@ const AROUND = computed(() => {
             <p class="flex flex-wrap items-center gap-2 text-sm text-stone-800">
               <span class="rounded bg-ridge-50 px-1.5 py-0.5 text-[10px] font-medium text-stone-600">{{ s.pill(i) }}</span>
               {{ i.name }}
+              <span
+                v-if="i.provenance === 'derived'"
+                class="rounded bg-stone-100 px-1.5 py-0.5 text-[10px] text-stone-500"
+              >整理</span>
             </p>
             <p v-if="i.note" class="mt-1 text-[11px] leading-relaxed text-stone-500">{{ i.note }}</p>
             <p v-if="i.warning" class="mt-1 text-[11px] leading-relaxed text-red-700">⚠ {{ i.warning }}</p>
           </li>
         </ul>
-        <p v-if="s.key === 'campsites'" class="mt-2 text-[11px] leading-relaxed text-stone-500">
-          野营地一律适用无痕山林：不留垃圾、不生明火、不占河道；收费营地的开放与收费以现场为准。
-        </p>
-        <p v-else-if="s.key === 'photo_spots'" class="mt-2 text-[11px] leading-relaxed text-stone-500">
-          打卡点为机位说明，未核实、不承诺拍摄效果。请勿为取景进入未开放区域或临崖边缘，禁止跨越护栏、攀爬文保石刻与涉水站位。
+        <p v-if="AROUND_FOOTNOTE[s.key]" class="mt-2 text-[11px] leading-relaxed text-stone-500">
+          {{ AROUND_FOOTNOTE[s.key] }}{{ PROVENANCE_NOTE }}
         </p>
       </section>
 
