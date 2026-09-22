@@ -354,13 +354,10 @@ CREATE TABLE t_qinling_valley (
     "recommended_stores": [
       {
         "name": "大峪老李水泉农家院",
-        "tel": "138xxxxxxxx",
         "tag": "活水鱼/山野土菜",
-        "average_cost": 65
       },
       {
         "name": "大峪星空野奢露营餐吧",
-        "tel": "139xxxxxxxx",
         "tag": "咖啡简餐/帐篷下午茶",
         "average_cost": 98
       }

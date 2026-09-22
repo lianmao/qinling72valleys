@@ -105,13 +105,11 @@
       {
         "name": "大峪老李水泉农家院",
         "tag": "活水鱼/土鸡/山野菜",
-        "tel": "138xxxxxxxx",
         "price_per_person": "¥65"
       },
       {
         "name": "大峪星空野奢露营餐吧",
         "tag": "野奢天幕/咖啡下午茶",
-        "tel": "139xxxxxxxx",
         "price_per_person": "¥98"
       }
     ]

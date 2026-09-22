@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ridge-50: #f2f7f3;
+  --color-ridge-900: #0f2a1d;
+  --color-stone-ink: #1c1d1a;
+  --font-sans: -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { @apply bg-ridge-50 text-stone-ink font-sans antialiased; }
+
+/* 地图 Marker 呼吸灯 */
+.marker { width: 22px; height: 22px; display: grid; place-items: center; }
+.marker__dot {
+  width: 12px; height: 12px; border-radius: 9999px;
+  box-shadow: 0 0 0 2px #fff, 0 1px 3px rgb(0 0 0 / .4);
+}
+.marker__ring {
+  position: absolute; width: 12px; height: 12px; border-radius: 9999px;
+  opacity: .75; animation: breathe 2.4s ease-out infinite;
+}
+.marker--open .marker__dot, .marker--open .marker__ring { background: #16a34a; }
+.marker--closed .marker__dot, .marker--closed .marker__ring { background: #dc2626; }
+.marker--unknown .marker__dot, .marker--unknown .marker__ring { background: #94a3b8; }
+.marker--top .marker__dot { width: 15px; height: 15px; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #b45309, 0 1px 4px rgb(0 0 0 / .45); }
+
+@keyframes breathe {
+  0% { transform: scale(1); opacity: .7; }
+  100% { transform: scale(3.2); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .marker__ring { animation: none; } }
+
+/* 抽屉把手与安全区 */
+.sheet-handle { touch-action: none; }
+.pb-safe { padding-bottom: max(0.75rem, env(safe-area-inset-bottom)); }

@@ -1,0 +1,22 @@
+{
+  "name": "qinling72valleys",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "秦岭七十二峪 · 互动导游与出游决策地图",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "data": "python3 scripts/gen-valleys.py"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.16",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "tailwindcss": "^4.1.16",
+    "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "vue": "^3.5.22"
+  }
+}

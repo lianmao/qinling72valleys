@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "note": "首批 10 大核心峪深度数据，来源 PRD §4 初稿。全部标记 confidence=unverified。",
+    "decision_2026_09_22": "不收录农家乐联系电话/微信等任何联系方式，仅保留店名与招牌菜文字信息。",
+    "dashboard_state_legend": {
+      "yes": "具备 / 允许",
+      "partial": "有条件（见说明）",
+      "no": "不具备 / 禁止",
+      "unknown": "待核实"
+    }
+  },
+  "valleys": {
+    "VALLEY_034": {
+      "highlight": "大峪水库碧波景观，水库上游有十里庙、大峪星空野奢营地。春看野花，夏可戏水避暑。",
+      "dashboard": {
+        "overnight": { "state": "partial", "text": "允许（限商业营地与指定平地）" },
+        "water": { "state": "yes", "text": "山泉溪流（不可直接饮用，需煮沸）" },
+        "vehicle": { "state": "yes", "text": "全程硬化水泥路，私家车可直达营地" },
+        "toilet": { "state": "yes", "text": "商业营地及沿途农家乐具备洗手间" }
+      },
+      "flood_risk": true,
+      "flood_warning": "严禁在水库下游及干涸河道内私自搭设帐篷过夜，上游暴雨易发泄洪山洪。",
+      "foods": ["现捞活水虹鳟鱼（一鱼三吃：刺身/红烧/椒盐）", "大峪土鸡焖砂锅"],
+      "agritainment": [
+        { "name": "大峪老李水泉农家院", "tag": "活水鱼 / 土鸡 / 山野菜" },
+        { "name": "大峪星空野奢露营餐吧", "tag": "野奢天幕 / 咖啡下午茶" }
+      ],
+      "confidence": "unverified"
+    },
+    "VALLEY_043": {
+      "highlight": "唐代进贡荔枝的古道起点，峪口建有登山步道，中段有道教全真圣地金仙观，适合徒步初学者与亲子休闲。",
+      "dashboard": {
+        "overnight": { "state": "partial", "text": "峪口核心保护区禁止野外过夜，峪口外围营地可夜宿" },
+        "water": { "state": "partial", "text": "自来水补给点 + 金仙观山泉" },
+        "vehicle": { "state": "partial", "text": "私家车需停放峪口生态停车场，换乘摆渡车或徒步进山" },
+        "toilet": { "state": "yes", "text": "峪口游客中心、金仙观公厕完善" }
+      },
+      "flood_risk": null,
+      "flood_warning": null,
+      "foods": ["子午绿豆饸饹", "农家搅团", "凉拌野菜"],
+      "agritainment": [
+        { "name": "子午仙庄", "tag": "农家土菜 / 河鲜" },
+        { "name": "金仙山下素斋农舍", "tag": "素斋 / 山野菜" }
+      ],
+      "confidence": "unverified"
+    },
+    "VALLEY_046": {
+      "highlight": "西安通往陕南的交通大动脉，自驾体验极佳。途经九龙潭瀑布群、净业寺、喂子坪，周末自驾车流最大的峪口。",
+      "dashboard": {
+        "overnight": { "state": "yes", "text": "喂子坪周边自驾露营地可过夜" },
+        "water": { "state": "yes", "text": "沣河沿河溪流" },
+        "vehicle": { "state": "yes", "text": "210 国道铺装沥青路，各类车型畅行直达" },
+        "toilet": { "state": "yes", "text": "沿途加油站、农家院集群、景区公厕密集" }
+      },
+      "flood_risk": true,
+      "flood_warning": "汛期遇大雨 210 国道实施交通管制并立即封山。",
+      "foods": ["沣峪口老字号辣子锅盔", "柴火土鸡", "洋芋糍粑"],
+      "agritainment": [
+        { "name": "喂子坪林间客栈", "tag": "土鸡 / 山野菜" },
+        { "name": "九龙山庄农家菜", "tag": "锅盔 / 农家菜" }
+      ],
+      "confidence": "unverified"
+    },
+    "VALLEY_039": {
+      "highlight": "国家 4A 级景区、山崩地貌地质公园，高山堰塞湖天池与常年冷风习习的冰风洞，设施最健全成熟。",
+      "dashboard": {
+        "overnight": { "state": "yes", "text": "景区天池旁露营基地可正规过夜（需购票预约）" },
+        "water": { "state": "yes", "text": "市政自来水配套" },
+        "vehicle": { "state": "yes", "text": "车辆直达景区大门及天池停车场" },
+        "toilet": { "state": "yes", "text": "标准 3A 级旅游公厕" }
+      },
+      "flood_risk": null,
+      "flood_warning": null,
+      "foods": ["太乙矿泉豆腐", "秦岭山野菜", "烤虹鳟"],
+      "agritainment": [
+        { "name": "翠华山庄餐厅", "tag": "山野土菜" },
+        { "name": "太乙宫老院子土菜馆", "tag": "农家土菜" }
+      ],
+      "confidence": "unverified"
+    },
+    "VALLEY_048": {
+      "highlight": "唐代诗人李白、岑参曾游历并赋诗。瀑布气势磅礴，溪流平缓处水质清澈，夏日戏水、亲子聚餐首选。",
+      "dashboard": {
+        "overnight": { "state": "partial", "text": "景区内夜间清场禁止野宿，周边民宿营地可过夜" },
+        "water": { "state": "yes", "text": "山涧高冠瀑布水" },
+        "vehicle": { "state": "yes", "text": "环山路直入峪口停车场，步行 5 分钟入核心景区" },
+        "toilet": { "state": "yes", "text": "景区内外洗手间完备" }
+      },
+      "flood_risk": null,
+      "flood_warning": null,
+      "foods": ["高冠烤土鸡", "浆水鱼鱼", "油炸花椒芽"],
+      "agritainment": [
+        { "name": "高冠听瀑楼", "tag": "烤土鸡 / 河鲜" },
+        { "name": "老高冠清泉农家院", "tag": "农家菜 / 戏水" }
+      ],
+      "confidence": "unverified"
+    },
+    "VALLEY_050": {
+      "highlight": "万亩紫荆花海、彩虹瀑布。负氧离子极高，木栈道依山依水而建，舒适度高。",
+      "dashboard": {
+        "overnight": { "state": "yes", "text": "峪内森林康养营地支持露营帐篷搭建" },
+        "water": { "state": "yes", "text": "天然溪流 + 营地供水" },
+        "vehicle": { "state": "partial", "text": "观光主道直达景区入口，内部乘坐观光车" },
+        "toilet": { "state": "yes", "text": "景区沿途多处卫生间" }
+      },
+      "flood_risk": null,
+      "flood_warning": null,
+      "foods": ["户县辣子酱", "手撕土鸡", "干炸小河虾"],
+      "agritainment": [
+        { "name": "太平红叶山庄", "tag": "土鸡 / 山野菜" },
+        { "name": "紫荆花开农家乐", "tag": "农家菜 / 赏花" }
+      ],
+      "confidence": "unverified"
+    },
+    "VALLEY_056": {
+      "highlight": "西汉高速涝峪口下车即达。内有黑山岔百米冰瀑/水瀑，沙窝村保留传统秦岭民俗农家院风貌。",
+      "dashboard": {
+        "overnight": { "state": "yes", "text": "沙窝村及周边乡村营地支持过夜房车与帐篷" },
+        "water": { "state": "yes", "text": "溪流与山泉" },
+        "vehicle": { "state": "yes", "text": "高速直达，乡村道路路况良好" },
+        "toilet": { "state": "yes", "text": "村落聚落公共洗手间齐全" }
+      },
+      "flood_risk": null,
+      "flood_warning": null,
+      "foods": ["手擀杂面", "农家辣子炒土猪肉", "槐花麦饭"],
+      "agritainment": [
+        { "name": "沙窝老屋农家", "tag": "民俗农家院" },
+        { "name": "黑山岔聚贤山庄", "tag": "土猪肉 / 山野菜" }
+      ],
+      "confidence": "unverified"
+    },
+    "VALLEY_026": {
+      "highlight": "蓝田小众高山草甸风貌，谷内宽阔，溪流穿林而过，被户外圈称为「西安周边小阿勒泰」。",
+      "dashboard": {
+        "overnight": { "state": "yes", "text": "允许露营搭建（需严格执行「无痕山林」原则）" },
+        "water": { "state": "partial", "text": "清澈溪流，需自带滤水器或自备饮用水" },
+        "vehicle": { "state": "partial", "text": "可开至草甸入口水泥路尽头，部分非铺装路面需慢行" },
+        "toilet": { "state": "no", "text": "沿线无固定公厕，需自备移动户外卫生设备" }
+      },
+      "flood_risk": true,
+      "flood_warning": "夏季草甸易遇强对流雷雨，雷雨天切勿在开阔山岗扎营。",
+      "foods": ["蓝田九大碗", "蓝田荞麦饸饹", "葱花油旋"],
+      "agritainment": [
+        { "name": "清峪人家聚落", "tag": "九大碗 / 农家菜" },
+        { "name": "蓝田聚宝生态农庄", "tag": "生态农庄" }
+      ],
+      "confidence": "unverified"
+    },
+    "VALLEY_028": {
+      "highlight": "摩诘诗画《辋川集》二十景所在地，「明月松间照，清泉石上流」发源地，禅意民宿集聚。",
+      "dashboard": {
+        "overnight": { "state": "yes", "text": "周边禅意野奢营地、精致民宿花园露营" },
+        "water": { "state": "yes", "text": "山泉水及市政自来水" },
+        "vehicle": { "state": "yes", "text": "全程沥青路面，车行直达" },
+        "toilet": { "state": "yes", "text": "沿线公厕及精品民宿设施良好" }
+      },
+      "flood_risk": null,
+      "flood_warning": null,
+      "foods": ["辋川神仙粉", "蓝田饸饹", "山野核桃豆腐"],
+      "agritainment": [
+        { "name": "辋川别业客栈", "tag": "禅意民宿 / 茶食" },
+        { "name": "摩诘草堂茶食坊", "tag": "茶食 / 农家菜" }
+      ],
+      "confidence": "unverified"
+    },
+    "VALLEY_011": {
+      "highlight": "「自古华山一条路」徒步起始点。沿途玉泉院、回心石、千尺幢、百尺峡，摩崖石刻密布。",
+      "dashboard": {
+        "overnight": { "state": "partial", "text": "进山步道仅可在山顶营地/宾馆周边特定区域搭帐篷" },
+        "water": { "state": "partial", "text": "沿途服务驿站充足瓶装水补给" },
+        "vehicle": { "state": "partial", "text": "自驾停至华山游客中心/玉泉院停车场，徒步进峪" },
+        "toilet": { "state": "yes", "text": "登山步道沿途按距离分布公厕" }
+      },
+      "flood_risk": null,
+      "flood_warning": null,
+      "foods": ["华阴特色大刀面", "华山汽锅土鸡", "老潼关肉夹馍"],
+      "agritainment": [
+        { "name": "玉泉院古街老菜馆", "tag": "大刀面 / 汽锅鸡" },
+        { "name": "西岳山珍楼", "tag": "山珍 / 农家菜" }
+      ],
+      "confidence": "unverified"
+    }
+  }
+}
