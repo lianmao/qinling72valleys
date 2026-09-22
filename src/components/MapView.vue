@@ -25,6 +25,8 @@ onMounted(async () => {
     const h = await initMap(el.value, props.valleys, (v) => emit('pick', v))
     if (cancelled) return
     handle.value = h
+    // 供 QA / 线上排查读取真实视野（只读引用，不参与渲染）
+    window.__qinlingMap = h
   } catch (e) {
     error.value = e.message
   } finally {
